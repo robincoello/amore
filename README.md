@@ -7,6 +7,18 @@ Una version de paty https://github.com/robincoello/paty en latino
 
 espeak
 
+Debian 
+
+```
+sudo apt-get install espeak
+```
+
+Fedora 
+
+```
+sudo dnf install espeak
+```
+
 
 ## instalar 
 
@@ -33,3 +45,4 @@ hola
 quien soy
 ```
 
+Si no escuchas nada debes instalar `espeak`
