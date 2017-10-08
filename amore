@@ -30,6 +30,15 @@ elegir (pregunta)
 	sis.pipe("espeak -ves-la".. r)
 
 	escribir(r)		
+
+## ahora vamos a leer desde json de una web
+    caso'Donde naciste':
+	escribir()
+	
+    caso'dame los usuarios del sistema':
+	escribir(sis.pipe('echo Un momento los busco  | espeak -ves-la'))
+	escribir(sis.pipe('cat /etc/passwd | nl'))
+
 	
 ##
     caso 'test':
@@ -39,7 +48,8 @@ elegir (pregunta)
 	respuesta('Este es con la funcion respuesta')
 
     defecto:
-        escribir('No he comprendido la pregunta')
+        escribir(sis.pipe('echo No he comprendido la pregunta | espeak -ves-la '))
+	
 fin
 
 
