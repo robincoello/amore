@@ -27,8 +27,9 @@ amore
 ```
 
 preguntas: 
-
+```
 hola
-quien soy
 
+quien soy
+```
 
