@@ -1,3 +1,41 @@
 #! /usr/local/bin/latino
 
-escribir("Hola")
+
+funcion respuesta(r)
+
+hablado = 1
+	si( hablado )
+		sis.pipe("echo r | espeak -ves-la")
+		escribir(r)
+	fin
+fin
+
+
+
+escribir("Hola tienes alguna pregunta?")
+
+pregunta = leer()
+
+
+elegir (pregunta)
+    caso 'hola':
+        escribir("Como estas? " .. usuario)
+
+##
+    caso 'a':
+        escribir("Tu nombre es: ")	
+	n = sis.pipe('echo este es un test $USER  | espeak -ves-la ')
+	r = "Tu nombre es: " .. n
+	escribir(n)
+
+    caso 'test':
+        escribir(sis.pipe('espeak -ves-la "Hola este es un test"'))
+
+    caso 't':
+	respuesta('Este es con la funcion respuesta')
+
+    defecto:
+        escribir('No he comprendido la pregunta')
+fin
+
+
