@@ -10,6 +10,15 @@ hablado = 1
 	fin
 fin
 
+funcion preguntas_disponibles()
+	escribir("Lista de preguntas disponibles")
+	escribir("====================================")
+	escribir( sis.pipe("sed -n '/^caso/p' amore | nl" ) )
+	escribir("====================================")
+
+fin
+
+
 
 
 escribir("Hola tienes alguna pregunta?")
@@ -18,12 +27,18 @@ pregunta = leer()
 
 
 elegir (pregunta)
-    caso 'hola':
+
+    caso'actualizate':
+	escribir(sis.pipe('sudo cp amore /usr/local/bin/'))
+	escribir("Listo")
+
+
+    caso'hola':
 	sis.pipe('echo Hola como estas? | espeak -ves-la ')
         escribir("Hola como estas? ")
 
 ##
-    caso 'quien soy':
+    caso'quien soy':
         
 	r = "Tu eres: " .. sis.pipe('echo $USER')
 
@@ -49,6 +64,7 @@ elegir (pregunta)
 
     defecto:
         escribir(sis.pipe('echo No he comprendido la pregunta | espeak -ves-la '))
+	preguntas_disponibles()
 	
 fin
 
