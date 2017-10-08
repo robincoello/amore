@@ -26,6 +26,9 @@ amore
 
 ```
 
+preguntas: 
 
+hola
+quien soy
 
 
