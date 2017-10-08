@@ -3,6 +3,10 @@
 Una version de paty https://github.com/robincoello/paty en latino
 
 
+## Requiere
+
+espeak
+
 
 ## instalar 
 
