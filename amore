@@ -19,15 +19,19 @@ pregunta = leer()
 
 elegir (pregunta)
     caso 'hola':
-        escribir("Como estas? " .. usuario)
+	sis.pipe('echo Hola como estas? | espeak -ves-la ')
+        escribir("Hola como estas? ")
 
 ##
-    caso 'a':
-        escribir("Tu nombre es: ")	
-	n = sis.pipe('echo este es un test $USER  | espeak -ves-la ')
-	r = "Tu nombre es: " .. n
-	escribir(n)
+    caso 'quien soy':
+        
+	r = "Tu eres: " .. sis.pipe('echo $USER')
 
+	sis.pipe("espeak -ves-la".. r)
+
+	escribir(r)		
+	
+##
     caso 'test':
         escribir(sis.pipe('espeak -ves-la "Hola este es un test"'))
 
